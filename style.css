@@ -1,0 +1,52 @@
+#container {
+    padding: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+#calculator {
+    display: flex;
+    flex-direction: column;
+    border: 10px solid black;
+    border-radius: 5%;
+    padding: 5%;
+    background-color: rgba(192, 192, 192, 0.500);
+}
+#display {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px;
+}
+.displayNum {
+    width: 300px;
+    direction: rtl;
+    border: 5px solid black;
+    border-radius: 5%;
+    background-color: rgb(240, 255, 250);
+}
+#btnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    padding: 0.5em;
+    gap: 20px;
+    justify-content: center;
+}
+.btnNum, .btnOperation {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    background-color:rgb(50, 50, 50)
+}
+#clear {
+    background-color: red;
+}
+#equals {
+    background-color: rgb(150, 150, 150);
+}

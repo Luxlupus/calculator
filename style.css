@@ -31,7 +31,7 @@ body {
     max-width: fit-content;
     min-height: 60px;
     font-size: 50%;
-    direction: rtl;
+    text-align: end;
     border: 5px solid black;
     border-radius:5%;
     background-color: rgb(240, 255, 250);
@@ -58,6 +58,7 @@ body {
     color: white;
     background-color:rgb(50, 50, 50);
 }
+
 .btnOperation {
     background-color:rgb(150, 150, 150);
 }
@@ -93,4 +94,8 @@ button:hover
 button:active
 {
     background-color: #313638;
+}
+.btnDecimalPoint:disabled {
+    background-color: rgb(200, 200, 200);
+    border-color: rgb(200, 200, 200);
 }

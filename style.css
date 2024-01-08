@@ -95,7 +95,7 @@ button:active
 {
     background-color: #313638;
 }
-.btnDecimalPoint:disabled {
+.btnDecimalPoint:disabled, .equals:disabled {
     background-color: rgb(200, 200, 200);
     border-color: rgb(200, 200, 200);
 }

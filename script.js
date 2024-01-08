@@ -76,7 +76,7 @@ for (const element of numBtns) {
             activeDisplay.textContent = a;
             displayNum.appendChild(activeDisplay);
         }
-        else if(operator !== null && b === 0){
+        else if(operator !== null){
             b = Number(b + element.value);
             console.log("Value of b is:", b);
             console.log(typeof(b));
@@ -109,6 +109,7 @@ for (const element of operatorBtns) {
         //assign operator sign for next operation and calculate if the equal sign is not clicked
         else if(operator !== null) {
             activateDecPoint();
+            activeEquals();
             operate(operator, a, b);
             a = result;
             console.log("Value of new a is:", a);
@@ -143,6 +144,10 @@ decPoint.addEventListener('click', () => {
 function activateDecPoint() {
     decPoint.disabled = false;
 }
+//reactibate equals btn
+function activeEquals() {
+    equals.disabled = false;
+}
 //calling corresponding math function when "=" clicked
 const equals = document.getElementById('equals');
 equals.addEventListener('click', () => { 
@@ -150,6 +155,7 @@ equals.addEventListener('click', () => {
     activeDisplay.textContent = result;
     displayNum.appendChild(activeDisplay);
     decPoint.disabled = true;
+    equals.disabled = true;
 });
 
 //clearing the display when C clicked and reset variables
@@ -157,6 +163,7 @@ const clearBtn = document.getElementById('clearBtn');
 clearBtn.addEventListener('click', () => {
     displayNum.innerHTML = ""
     init();
+    activeEquals();
     activateDecPoint();
 });
 
